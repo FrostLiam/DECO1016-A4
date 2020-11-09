@@ -1,0 +1,15 @@
+// this is the grid container for the main page
+.home-page-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  gap: 0px 0px;
+}
+
+.Header { grid-area: 1 / 1 / 3 / 2; }
+.Main { grid-area: 2 / 1 / 4 / 2; }
+.Footer { grid-area: 3 / 1 / 4 / 2; }
+
+body {
+  text-align: center;
+}
