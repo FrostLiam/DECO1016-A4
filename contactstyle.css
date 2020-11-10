@@ -1,0 +1,20 @@
+// this is the grid container for the main page
+// taken from https://grid.layoutit.com/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.25fr 1fr 1fr 1fr 0.25fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header header"
+    "about about about about"
+    "contact contact contact contact"
+    "FAQ FAQ FAQ FAQ"
+    "footer footer footer footer";
+}
+.header { grid-area: header; }
+.contact { grid-area: contact; }
+.about { grid-area: about; }
+.FAQ { grid-area: FAQ; }
+.footer { grid-area: footer; }

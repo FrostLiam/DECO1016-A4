@@ -1,8 +1,10 @@
 // this is the grid container for the main page
-.home-page-grid{
+// taken from https://grid.layoutit.com/
+
+.home-page-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.25fr 1fr 0.25fr;
+  grid-template-rows: 0.15fr 1fr 0.15fr;
   gap: 0px 0px;
 }
 
@@ -10,6 +12,7 @@
 .Main { grid-area: 2 / 1 / 4 / 2; }
 .Footer { grid-area: 3 / 1 / 4 / 2; }
 
-body {
+
+section {
   text-align: center;
 }

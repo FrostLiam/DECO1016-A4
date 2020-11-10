@@ -1,0 +1,17 @@
+// this is the grid container for the main page
+// taken from https://grid.layoutit.com/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.15fr 1fr 0.15fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header header"
+    "donate donate volunteer volunteer"
+    "footer footer footer footer";
+}
+.header { grid-area: header; }
+.footer { grid-area: footer; }
+.donate { grid-area: donate; }
+.volunteer { grid-area: volunteer; }
