@@ -129,6 +129,11 @@ a:nth-child(2) {
 h2 {
   text-decoration: underline;
   display: inline;
+  font-size: 32px;
+}
+
+p {
+  font-size: 18px;
 }
 
 .donate {
@@ -138,20 +143,46 @@ h2 {
 .donate, .volunteer {
   padding: 30px;
   height: 100%;
+  margin-top: 30px;
 }
 
-/*base button code taken from https://repl.it/@FrostLiam/DECO1016FirstWebsite#style.css */
-button {
+/*base button animation with arrow code taken from https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1*/
+.button {
   text-align: center;
   background-color: white;
   border: 1px solid #f4d856;
   transition-duration: 0.6s;
   display: inline;
   float: right;
+  border-radius: 4px;
+  padding: 20px;
+  width: 200px;
+  font-size: 20px;
 }
 
-button:hover {
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: ' \00bb';
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 1s;
+}
+
+.button:hover {
   background-color: #f4d856;
   color: black;
   cursor: pointer;
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
