@@ -4,15 +4,149 @@
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.15fr 0.25fr 1fr 0.15fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
     "header header header"
-    "type type type"
     "main main main"
     "footer footer footer";
 }
 .header { grid-area: header; }
 .footer { grid-area: footer; }
 .main { grid-area: main; }
-.type { grid-area: type; }
+
+header {
+  background: #afbcce;
+  position: relative;
+}
+
+/* fixed footer base code from w3schools.com/howto/howto_css_fixed_footer.asp */
+footer {
+  background-color: #afbcce;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer > h5 {
+  margin-left: 20px;
+  display: inline;
+}
+
+/* ul is specified as we want different margins for the header and footer*/
+footer > ul {
+  display: inline;
+  margin-top: 0px;
+  float: right;
+}
+
+/* base code for creating a nav bar from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav */
+.footerimgs {
+  padding-left: 0;
+  float: right;
+  display: block-inline;
+  list-style-type: none;
+  margin: 10px 10px 0px 10px;
+}
+
+.footerimgs > img {
+  width: 30px;
+  height: 30px;
+}
+
+/* fixed header - inspired by the fixed footer */
+header {
+  background-color: #afbcce;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* the z-index ensures it is on top of other content on the page*/
+  z-index: 2;
+  padding: 0px;
+}
+
+header > img {
+  margin: 0px 10px;
+}
+
+header > nav {
+  display: inline;
+  margin: 0px;
+  float: right;
+}
+
+/* the inline property for nav and ul ensures that the navigation is on the same line as the home image/link */
+header > nav > ul {
+  display: inline;
+  margin-bottom: 0px;
+  float: right;
+}
+
+/* base code for creating a nav bar from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav */
+.navigation {
+  padding-left: 0;
+  float: right;
+  display: block-inline;
+  list-style-type: none;
+  margin: 20px 150px 20px 150px;
+}
+
+/* styling for the naivation links */
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #42b1b6;
+  background-color: transparent;
+}
+
+a:active {
+  color: #55415e;
+  background-color: transparent;
+}
+
+/*selecting event only from navigation bar */
+a:nth-child(3) {
+  color: #42b1b6;
+}
+
+/* display/hide sections in main - taken from https://repl.it/@FrostLiam/challenge-recipe-updated-lists#css/style.css */
+section {
+ display: none;
+ margin-top: 100px;
+}
+
+section:target {
+ display: block;
+}
+
+/*pagination code taken from https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_pagination_transition */
+.pagination {
+  display: block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
