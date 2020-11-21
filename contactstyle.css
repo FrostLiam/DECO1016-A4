@@ -1,20 +1,18 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 80px 1fr 1fr 1fr 0.25fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px auto auto 0.25fr;
   gap: 0px 0px;
   grid-template-areas:
-    "header header header header"
-    "about about about about"
-    "contact contact contact contact"
-    "FAQ FAQ FAQ FAQ"
-    "footer footer footer footer";
+    "header"
+    "contact"
+    "faq"
+    "footer";
 }
 .header { grid-area: header; }
 .contact { grid-area: contact; }
-.about { grid-area: about; }
-.FAQ { grid-area: FAQ; }
+.faq { grid-area: faq; }
 .footer { grid-area: footer; }
 
 header {
@@ -122,3 +120,43 @@ a:active {
 a:nth-child(1) {
   color: #42b1b6;
 }
+
+body {
+  background-color: #e3e3e3;
+  margin: 20px 0;
+  padding: 10px;
+  height: 100%;
+}
+
+.contact, .faq {
+  background-clip: padding-box;
+  background-color: lightgray;
+  margin: 0px auto 60px auto;
+  width: 600px;
+  padding: 20px 100px;
+  border-radius: 10px;
+}
+
+h3 {
+  margin: 5px 0px;
+}
+
+.contact > p {
+  display: inline-block;
+}
+
+/*grid container for contact to seperate into two columns*/
+.contact-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "address other";
+}
+.address { grid-area: address; }
+.other { 
+  grid-area: other; 
+  margin-top: 15%;
+}
+

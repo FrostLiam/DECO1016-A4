@@ -64,7 +64,8 @@
       <!-- base code taken from https://www.w3schools.com/howto/howto_js_popup_form.asp -->
       <!-- after consideration about using aria-required vs required for 'user agents that do not yet support html5', this article "https://userway.org/blog/html-required-versus-aria-required" provides a solution which is to manually include it (done through the use of *)-->
       <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
+        <!-- Submit button just leads back to donate page -->
+        <form action="donate.html" class="form-container">
           <h1>Apply to Become a Volunteer:</h1>
 
           <label for="firstname"><strong>First Name *</strong></label>
@@ -76,7 +77,7 @@
           <input type="email" placeholder="Enter Email" name="email" required>
 
           <label for="tel"><strong>Phone Number *</strong></label>
-          <input type="tel" placeholder="0123-456-789" name="tel" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" required>
+          <input type="tel" placeholder="0123456789" name="tel" pattern="[0-9]{10}" required>
 
           <label for="street"><strong>Street Address </strong></label><input type="text" placeholder="Street Address" name="street">
 
@@ -90,9 +91,9 @@
           <label for="emn"><strong>Emergency Contact Name *</strong></label><input type="text" placeholder="Emergency Contact Name" name="emn" required>
 
           <label for="empn"><strong>Emergency Contact Phone Number *</strong></label>
-          <input type="tel" placeholder="0123-456-789" name="empn" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" required>
+          <input type="tel" placeholder="0123456789" name="empn" pattern="[0-9]{10}" required>
 
-          <p><strong>What Volunteer Roles would you like to apply for?</strong></p>
+          <p><strong>What Volunteer Roles would you like to apply for? *</strong></p>
 
           <input type="checkbox" name="vol1" value="APC">
           <label for="vol1"> Artsomewhere Program Coordinator</label><br/>
