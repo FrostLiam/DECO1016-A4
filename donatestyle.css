@@ -2,12 +2,20 @@
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.15fr 1fr 0.15fr;
+  grid-template-rows: 80px 1fr 0.15fr;
   gap: 0px 0px;
   grid-template-areas:
     "header header"
     "donate volunteer"
     "footer footer";
+
+  height: 100%;
+  /*adding a background image - code snippets from https://www.w3schools.com/cssref/pr_background-image.asp */
+  background-color: #e3e3e3;
+  background-image: url("images/vol-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
 }
 
 .header { grid-area: header; }
@@ -136,28 +144,40 @@ p {
   font-size: 18px;
 }
 
+section > p:first-of-type {
+  margin-top: 60px;
+}
+
 .donate {
   border-right: solid 1px;
 }
 
+/* background clip code from https://css-tricks.com/almanac/properties/b/background-clip/ */
 .donate, .volunteer {
   padding: 30px;
   height: 100%;
-  margin-top: 30px;
+  background-clip: padding-box;
+  background-color: #e3e3e3;
+  opacity: 0.8;
+}
+
+/* hover opacity from https://www.w3schools.com/css/css_image_transparency.asp */
+.donate:hover, .volunteer:hover {
+  opacity: 0.98;
 }
 
 /*base button animation with arrow code taken from https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1*/
 .button {
   text-align: center;
-  background-color: white;
-  border: 1px solid #f4d856;
+  background-color: #e3e3e3;
+  border: 2px solid #f4d856;
   transition-duration: 0.6s;
   display: inline;
   float: right;
   border-radius: 4px;
   padding: 20px;
   width: 200px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .button span {
