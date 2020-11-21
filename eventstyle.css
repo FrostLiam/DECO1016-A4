@@ -13,6 +13,23 @@
 .footer { grid-area: footer; }
 .main { grid-area: main; }
 
+.main-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "title"
+    "content"
+}
+
+.title { grid-area: title; }
+.content { grid-area: content; }
+
+.title {
+  height: 50px;
+}
+
 header {
   background: #afbcce;
   position: relative;
@@ -157,4 +174,30 @@ section:target {
 .pagination a:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+/*Card Code - base code from  https://www.w3schools.com/howto/howto_css_cards.asp*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 8px;
+  margin: 10px;
+  max-width: 300px;
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.05);
+  transition-property: transform;
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  dispaly: inline;
 }
