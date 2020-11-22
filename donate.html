@@ -9,6 +9,8 @@
     <title>Volunteering & Donating | 107 Projects</title>
     <link rel="icon" href="images/107-logo.png" type="image/png"/>
     <link href="donatestyle.css" rel="stylesheet" type="text/css" />
+    <!-- lang allows screen readers to know what language the website is -->
+    <html lang="en"> 
 
     <!-- importing fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -83,45 +85,45 @@
           <br/>
 
           <label for="firstname"><strong>First Name *</strong></label>
-          <input type="text" placeholder="First Name" name="firstname" required>
+          <input type="text" placeholder="First Name" name="firstname" id="firstname" required>
 
-          <label for="lastname"><strong>Last Name *</strong></label><input type="text" placeholder="Last Name" name="lastname" required>
+          <label for="lastname"><strong>Last Name *</strong></label><input type="text" placeholder="Last Name" name="lastname" id="lastname" required>
 
           <label for="email"><strong>Email *</strong></label>
-          <input type="email" placeholder="Enter Email" name="email" required>
+          <input type="email" placeholder="Enter Email" name="email" id="email" required>
 
           <label for="tel"><strong>Phone Number *</strong></label>
-          <input type="tel" placeholder="0123456789" name="tel" pattern="[0-9]{10}" required>
+          <input type="tel" placeholder="0123456789" name="tel" id="tel" pattern="[0-9]{10}" required>
 
-          <label for="street"><strong>Street Address </strong></label><input type="text" placeholder="Street Address" name="street">
+          <label for="street"><strong>Street Address </strong></label><input type="text" placeholder="Street Address" name="street" id="street">
 
-          <label for="city"><strong>City</strong></label><input type="text" placeholder="City" name="city">
+          <label for="city"><strong>City</strong></label><input type="text" placeholder="City" name="city" id="city">
 
-          <label for="state"><strong>State</strong></label><input type="text" placeholder="State" name="state">
+          <label for="state"><strong>State</strong></label><input type="text" placeholder="State" name="state" id="state">
 
           <!-- didn't like the manual up and down for adding or minusing numbers, so kept it as type="text" -->
-          <label for="postcode"><strong>Postcode</strong></label><input type="text" placeholder="0123" name="postcode" maxlength="4" size="4" required>
+          <label for="postcode"><strong>Postcode</strong></label><input type="text" placeholder="0123" name="postcode" maxlength="4" size="4" id="postcode" required>
 
-          <label for="emn"><strong>Emergency Contact Name *</strong></label><input type="text" placeholder="Emergency Contact Name" name="emn" required>
+          <label for="emn"><strong>Emergency Contact Name *</strong></label><input type="text" placeholder="Emergency Contact Name" name="emn" id="emn" required>
 
           <label for="empn"><strong>Emergency Contact Phone Number *</strong></label>
-          <input type="tel" placeholder="0123456789" name="empn" pattern="[0-9]{10}" required>
+          <input type="tel" placeholder="0123456789" name="empn" id="empn" pattern="[0-9]{10}" required>
 
           <p><strong>What Volunteer Roles would you like to apply for? *</strong></p>
 
-          <input type="checkbox" name="vol1" value="APC">
+          <input type="checkbox" name="vol1" id="vol1" value="APC">
           <label for="vol1"> Artsomewhere Program Coordinator</label><br/>
 
-          <input type="checkbox" name="vol2" value="ComA">
+          <input type="checkbox" name="vol2" id="vol2" value="ComA">
           <label for="vol2"> Communications Assistant</label><br/>
 
-          <input type="checkbox" name="vol3" value="EI">
+          <input type="checkbox" name="vol3" id="vol3" value="EI">
           <label for="vol3"> Events Invigilator</label><br/>
 
-          <input type="checkbox" name="vol4" value="GA">
+          <input type="checkbox" name="vol4" id="vol4" value="GA">
           <label for="vol4"> Gallery Assistant</label><br/>
 
-          <input type="checkbox" name="vol5" value="VMC">
+          <input type="checkbox" name="vol5" id="vol5" value="VMC">
           <label for="vol5"> Venue Maintenance Coordinator</label><br/>
 
           <button type="submit" class="btn">Join Us Today!</button>
@@ -131,8 +133,7 @@
 
       <footer class="footer">
         <ul>
-            <a href="https://twitter.com/107projects" target="_blank" rel="noopener"><li class="footerimgs">
-              <img src="images/twitter-logo.png" alt="twitter link"></li></a>
+            <a href="https://twitter.com/107projects" target="_blank" rel="noopener"><li class="footerimgs"><img src="images/twitter-logo.png" alt="twitter link"></li></a>
 
             <a href="https://www.instagram.com/107projectsinc/" target="_blank" rel="noopener"><li class="footerimgs"><img src="images/insta-logo.png" alt="instagram link"></li></a>
 
