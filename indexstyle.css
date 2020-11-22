@@ -169,7 +169,7 @@ footer > ul {
   height: 25px;
 }
 
-/*header */
+/*base code for responsive header from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav */
 
 .topnav {
   /* fixed and 100% width creates a sticky header */
@@ -222,6 +222,25 @@ a:nth-child(1) {
   display: none;
 }
 
+h3 {
+  font-family: 'Hind Guntur', sans-serif;
+  font-size: 25px;
+}
+
+h1 {
+  font-family: 'Nerko One', cursive;
+  font-size: 68px;
+}
+
+h2 {
+  vertical-align: middle;
+  font-size: 20px;
+  padding: 30px;
+  font-family: 'Hind Guntur', sans-serif;
+}
+
+/*screen for mobile */
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -244,20 +263,16 @@ a:nth-child(1) {
   }
 }
 
-h3 {
-  font-family: 'Hind Guntur', sans-serif;
-  font-size: 25px;
-}
+/* re-arranging the grid for mobile screens to make them sit under eachother */
 
-h1 {
-  font-family: 'Nerko One', cursive;
-  font-size: 68px;
+@media screen and (max-width: 860px) {
+	.main {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "title"
+      "workshop"
+      "exhibition"
+      "present"
+      "screening";
+  }
 }
-
-h2 {
-  vertical-align: middle;
-  font-size: 20px;
-  padding: 30px;
-  font-family: 'Hind Guntur', sans-serif;
-}
-
