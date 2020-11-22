@@ -12,15 +12,13 @@ taken from https://grid.layoutit.com/ */
 .home-page-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 80px 1fr 0.1fr;
+  grid-template-rows: 80px 1fr 40px;
   gap: 0px 0px;
   grid-template-areas:
     "header"
     "main"
     "footer";
 } 
-
-.header { grid-area: header; }
 
 /* creates the differing sections for the main body making it easier to seperate it into the 4 event categories */
 .main {
@@ -37,9 +35,14 @@ taken from https://grid.layoutit.com/ */
 .exhibition { grid-area: exhibition; }
 .present { grid-area: present; }
 .screening { grid-area: screening; }
-.title { grid-area: title; }
 
-.footer { grid-area: footer; }
+.title { 
+  grid-area: title;
+  background-image: url("images/indexcover.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+ }
 
 /*css for title flip card
 base code from https://www.w3schools.com/howto/howto_css_flip_card.asp */
@@ -140,16 +143,12 @@ header {
 
 /* fixed footer base code from w3schools.com/howto/howto_css_fixed_footer.asp */
 footer {
+  grid-area: footer;
   background-color: #afbcce;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-}
-
-footer > h5 {
-  margin-left: 20px;
-  display: inline;
 }
 
 /* ul is specified as we want different margins for the header and footer*/
@@ -175,6 +174,7 @@ footer > ul {
 
 /* fixed header - inspired by the fixed footer */
 header {
+  grid-area: header;
   background-color: #afbcce;
   position: fixed;
   left: 0;

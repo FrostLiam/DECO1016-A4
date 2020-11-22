@@ -2,7 +2,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 80px auto auto 0.25fr;
+  grid-template-rows: 80px auto auto 20px;
   gap: 0px 0px;
   grid-template-areas:
     "header"
@@ -10,18 +10,19 @@
     "faq"
     "footer";
 }
-.header { grid-area: header; }
+
 .contact { grid-area: contact; }
 .faq { grid-area: faq; }
-.footer { grid-area: footer; }
 
 header {
+  grid-area: header;
   background: #afbcce;
   position: relative;
 }
 
 /* fixed footer base code from w3schools.com/howto/howto_css_fixed_footer.asp */
 footer {
+  grid-area: footer;
   background-color: #afbcce;
   position: fixed;
   left: 0;
@@ -29,10 +30,6 @@ footer {
   width: 100%;
 }
 
-footer > h5 {
-  margin-left: 20px;
-  display: inline;
-}
 
 /* ul is specified as we want different margins for the header and footer*/
 footer > ul {
@@ -146,6 +143,10 @@ body {
 
 h3 {
   margin: 5px 0px;
+}
+
+p {
+  margin-top: 0px;
 }
 
 .contact > p {
