@@ -14,6 +14,10 @@
 .contact { grid-area: contact; }
 .faq { grid-area: faq; }
 
+body {
+  font-family: 'Fira Sans', sans-serif;
+}
+
 header {
   grid-area: header;
   background: #afbcce;
@@ -48,8 +52,8 @@ footer > ul {
 }
 
 .footerimgs > img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 /* fixed header - inspired by the fixed footer */
@@ -79,6 +83,7 @@ header > nav > ul {
   display: inline;
   margin-bottom: 0px;
   float: right;
+  font-weight: 400;
 }
 
 /* base code for creating a nav bar from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav */
@@ -143,6 +148,11 @@ body {
 
 h3 {
   margin: 5px 0px;
+}
+
+h2 {
+  font-family: 'Hind Guntur', sans-serif;
+  margin: 8px 0px;
 }
 
 p {

@@ -26,6 +26,7 @@
 body, html {
   margin: 0px;
   height: 100%;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 header {
@@ -66,8 +67,8 @@ footer > ul {
 }
 
 .footerimgs > img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 /* fixed header - inspired by the fixed footer */
@@ -96,6 +97,7 @@ header > nav > ul {
   display: inline;
   margin-bottom: 0px;
   float: right;
+  font-weight: 400;
 }
 
 /* base code for creating a nav bar from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav */
@@ -139,6 +141,7 @@ h2 {
   text-decoration: underline;
   display: inline;
   font-size: 48px;
+  font-family: 'Hind Guntur', sans-serif;
 }
 
 p {
@@ -180,6 +183,7 @@ section > p:first-of-type {
   padding: 20px;
   width: 200px;
   font-size: 18px;
+  font-family: 'Hind Guntur', sans-serif;
 }
 
 .button span {
