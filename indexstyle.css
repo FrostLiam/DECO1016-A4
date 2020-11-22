@@ -217,10 +217,11 @@ a:nth-child(1) {
   color: #42b1b6;
 }
 
-
 .topnav .icon {
   display: none;
 }
+
+/* headers */
 
 h3 {
   font-family: 'Hind Guntur', sans-serif;
