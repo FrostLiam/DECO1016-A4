@@ -2,7 +2,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 80px 1fr 20px;
+  grid-template-rows: 20px 1fr 20px;
   gap: 0px 0px;
   grid-template-areas:
     "header header"
@@ -71,45 +71,27 @@ footer > ul {
   height: 25px;
 }
 
-/* fixed header - inspired by the fixed footer */
-header {
-  background-color: #afbcce;
-  left: 0;
-  top: 0;
+/*base code for responsive header from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav */
+
+.topnav {
+  /* fixed and 100% width creates a sticky header */
+  position: fixed;
   width: 100%;
-  /* the z-index ensures it is on top of other content on the page*/
-  z-index: 2;
-  padding: 0px;
+  overflow: hidden;
+  color: black;
+  background-color: #afbcce;
+  z-index: 9;
 }
 
-header > img {
-  margin: 0px 10px;
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-header > nav {
-  display: inline;
-  margin: 0px;
-  float: right;
-}
-
-/* the inline property for nav and ul ensures that the navigation is on the same line as the home image/link */
-header > nav > ul {
-  display: inline;
-  margin-bottom: 0px;
-  float: right;
-  font-weight: 400;
-}
-
-/* base code for creating a nav bar from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav */
-.navigation {
-  padding-left: 0;
-  float: right;
-  display: block-inline;
-  list-style-type: none;
-  margin: 20px 150px 20px 150px;
-}
-
-/* styling for the naivation links */
 a:link {
   color: black;
   background-color: transparent;
@@ -124,28 +106,28 @@ a:visited {
 
 a:hover {
   color: #42b1b6;
-  background-color: transparent;
+  background-color: #333;
 }
 
-a:active {
-  color: #55415e;
-  background-color: transparent;
-}
-
-/*selecting volunteer/donate only from navigation bar */
-a:nth-child(2) {
+.topnav a.active {
   color: #42b1b6;
+  background-color: #333;
+}
+
+.topnav .icon {
+  display: none;
 }
 
 h2 {
   text-decoration: underline;
   display: inline;
-  font-size: 48px;
+  font-size: 3vw;
   font-family: 'Hind Guntur', sans-serif;
 }
 
 p {
   font-size: 18px;
+  display: block;
 }
 
 section > p:first-of-type {
@@ -159,6 +141,7 @@ section > p:first-of-type {
 /* background clip code from https://css-tricks.com/almanac/properties/b/background-clip/ */
 .donate, .volunteer {
   padding: 30px;
+  margin-top: 30px;
   height: 100%;
   background-clip: padding-box;
   background-color: #e3e3e3;
@@ -181,6 +164,7 @@ section > p:first-of-type {
   float: right;
   border-radius: 4px;
   padding: 20px;
+  margin-top: 10px;
   width: 200px;
   font-size: 18px;
   font-family: 'Hind Guntur', sans-serif;
@@ -228,8 +212,9 @@ section > p:first-of-type {
 /* Add styles to the form container */
 .form-container {
   box-sizing: border-box;
-  width: 1000px;
-  padding: 10px;
+  max-width: 1000px;
+  min-width: 300px;
+  padding: 50px;
   background-color: white;
   height: 600px;
   overflow: auto;
@@ -271,4 +256,51 @@ section > p:first-of-type {
 /* Add some hover effects to buttons */
 .form-container .btn:hover  {
   opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 860px) {
+	.grid-container {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "volunteer"
+      "donate"
+      "footer";
+
+    background-image: none !important;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .button {
+    text-align: center;
+    display: block;
+    float: left;
+    margin: 10px 0px 30px 0px;
+  ?
+
 }

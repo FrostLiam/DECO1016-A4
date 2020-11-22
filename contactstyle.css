@@ -2,7 +2,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px auto auto 20px;
+  grid-template-rows: 100px auto auto 10px;
   gap: 0px 0px;
   grid-template-areas:
     "header"
@@ -181,3 +181,5 @@ p {
     text-align: left;
   }
 }
+
+/*there is no need to edit the grid to be compatible with mobile because all the elements are already in the correct position */

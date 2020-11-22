@@ -15,20 +15,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur&display=swap" rel="stylesheet">      
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;400&family=Hind+Guntur&display=swap" rel="stylesheet">
+
+    <!-- imports hamburger menu icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
     <div class="grid-container">
-      <header class="header">
-         <a href="index.html"><img src="images/107-logo.png" alt="logo" style="width:8%"></a>
+      <header>
+        <nav class="topnav" id="myTopnav">
+          <a href="index.html" rel="noopener">Home</a>
 
-        <nav>
-          <ul>
-            <a href="contact.html" rel="noopener"><li class="navigation">Contact & FAQ</li></a>
+          <a href="donate.html" class="active">Volunteering/Donating</a>
 
-            <a href="donate.html" rel="noopener"><li class="navigation">Volunteering/Donating</li></a>
+          <a href="contact.html" rel="noopener">Contact & FAQ</a>
 
-          </ul>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+
+        </nav>
       </header>
 
       <section class="donate">
@@ -73,7 +79,8 @@
       <div class="form-popup" id="myForm">
         <!-- Submit button just leads back to donate page -->
         <form action="donate.html" class="form-container">
-          <h1>Apply to Become a Volunteer:</h1>
+          <h2>Apply to Become a Volunteer:   </h2>
+          <br/>
 
           <label for="firstname"><strong>First Name *</strong></label>
           <input type="text" placeholder="First Name" name="firstname" required>
