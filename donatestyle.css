@@ -1,8 +1,8 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 20px 1fr 20px;
+  grid-template-columns: auto auto;
+  grid-template-rows: 20px auto auto;
   gap: 0px 0px;
   grid-template-areas:
     "header header"
@@ -17,14 +17,13 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
-
-.donate { grid-area: donate; }
-.volunteer { grid-area: volunteer; }
-
 
 body, html {
   margin: 0px;
+  padding: 0px;
   height: 100%;
   font-family: 'Fira Sans', sans-serif;
 }
@@ -134,9 +133,19 @@ section > p:first-of-type {
   margin-top: 60px;
 }
 
+section > p:last-of-type {
+  margin-bottom: 60px;
+}
+
 .donate {
   border-right: solid 1px;
+  grid-area: donate; 
 }
+
+.volunteer { 
+  grid-area: volunteer; 
+}
+
 
 /* background clip code from https://css-tricks.com/almanac/properties/b/background-clip/ */
 .donate, .volunteer {
@@ -294,13 +303,30 @@ section > p:first-of-type {
 
   h2 {
     font-size: 25px;
+    display: block; 
+  }
+
+  p {
+    display: block;
+  }
+
+  .form-container {
+    background-color: white;
   }
 
   .button {
     text-align: center;
     display: block;
-    float: left;
-    margin: 10px 0px 30px 0px;
-  ?
+    float: none;
+    margin: auto;
+  }
+
+  .donate, .volunteer { 
+    opacity: 1;
+  }
+
+  .donate {
+    padding-top: 100px !important;
+  }
 
 }
