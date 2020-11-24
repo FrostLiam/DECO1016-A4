@@ -1,0 +1,86 @@
+
+/*Grid container for whole page
+--------------------------------------------------------- */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px auto auto 10px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header"
+    "contact"
+    "faq"
+    "footer";
+
+  /*to make full length of screen*/
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.contact { grid-area: contact; }
+.faq { grid-area: faq; }
+
+
+/* Grid container in the first grid container for contact grid space
+----------------------------------------------------------- */
+
+/*grid container for contact to seperate into two columns*/
+.contact-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "address other";
+}
+.address { grid-area: address; }
+
+.other { 
+  grid-area: other; 
+  margin-top: 15%;
+}
+
+/* element code blocks
+------------------------------------------------------------- */
+
+body {
+  /* adding the background image - background colour put if for if the image doesn't load*/
+  background-color: #e3e3e3;
+  background-image: url("../images/contact-background.png");
+  background-position: 0 0;
+  /* background is fixed and in the center so that when you scroll, the imge does not move. No repeat is put in with cover so that the image covers the whole screen and is only displayed once. */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* although these could be put int the above made code blocks, since it applies to both I made a new code block that had both (means that if I update it, i dont need to update twice) */
+.contact, .faq {
+  background-clip: padding-box;
+  background-color: #d3d3d3;
+  margin: 0px auto 60px auto;
+  width: 600px;
+  padding: 20px 100px;
+  border-radius: 10px;
+}
+
+/* Fonts and typograghy
+------------------------------------------------------------ */
+
+h3 {
+  margin: 5px 0px;
+}
+
+h2 {
+  font-family: 'Hind Guntur', sans-serif;
+  margin: 8px 0px;
+}
+
+p {
+  margin-top: 0px;
+}
+
+/*there is no need to edit the grid to be compatible with mobile because all the elements are already in the correct position */
