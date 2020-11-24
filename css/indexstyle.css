@@ -1,3 +1,6 @@
+/*Grid container for whole page
+--------------------------------------------------------- */
+
 /* base grid container taken from https://grid.layoutit.com/ */
 .home-page-grid {
   display: grid;
@@ -9,6 +12,9 @@
     "main"
     "footer";
 } 
+
+/* Grid container in the first grid container for contact grid space
+----------------------------------------------------------- */
 
 /* creates the differing sections for the main body making it easier to seperate it into the 4 event categories */
 .main {
@@ -35,9 +41,13 @@
   background-position: 0 0;
  }
 
+/* Title flip card 
+------------------------------------------------------------- */
+
 /*css for title flip card
 base code from https://www.w3schools.com/howto/howto_css_flip_card.asp */
 
+/*positions flip card in class title */
 .flip-card {
   width: 700px;
   height: 300px;
@@ -46,6 +56,7 @@ base code from https://www.w3schools.com/howto/howto_css_flip_card.asp */
   position: relative;
 }
 
+/*centers flip card contents in middle of flipcard */ 
 .flip-card-contents {
   border-radius: 10px;
   background-color: #f4d856;
@@ -53,14 +64,17 @@ base code from https://www.w3schools.com/howto/howto_css_flip_card.asp */
   width: 100%;
   height: 100%;
   text-align: center;
+  /*transition based on the hover  */
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
 
+/* when mouse hovers over flip card, flip it */
 .flip-card:hover .flip-card-contents {
   transform: rotateY(180deg);
 }
 
+/* hides content until it is flipped */
 .flip-card-title, .flip-card-info {
   position: absolute;
   width: 100%;
@@ -71,17 +85,20 @@ base code from https://www.w3schools.com/howto/howto_css_flip_card.asp */
 
 /*vertical align and line height from https://stackoverflow.com/questions/5703552/how-can-i-center-text-horizontally-and-vertically-inside-a-div-block */
 
+/* centers title */
 .flip-card-title {
   vertical-align: middle;
   line-height: 180px;
 }
 
+/*makes this the back of card until hovered */
 .flip-card-info{
   transform: rotateY(180deg);
 }
 
 
-
+/* Cards for events
+------------------------------------------------------------- */
 
 /*Card Code - base code from  https://www.w3schools.com/howto/howto_css_cards.asp*/
 .card {
@@ -103,12 +120,13 @@ img {
   transition-property: transform;
 }
 
-/* Add some padding inside the card container */
+/* Adds padding inside the card container */
 .container {
   padding: 2px 16px;
 }
 
-/*styling the page*/
+/* element code blocks
+------------------------------------------------------------- */
 
 body {
   background-color: #e3e3e3;
@@ -118,8 +136,6 @@ section {
   text-align: center;
   position: relative;
 }
-
-/* headers */
 
 h3 {
   font-family: 'Hind Guntur', sans-serif;
@@ -139,11 +155,14 @@ h2 {
   font-family: 'Hind Guntur', sans-serif;
 }
 
-/* re-arranging the grid for mobile screens to make them sit under eachother */
+
+/* CSS for mobile
+------------------------------------------------------------- */
 
 @media screen and (max-width: 860px) {
 	.main {
     grid-template-columns: 100%;
+    /* re-arranging the grid for mobile screens to make them sit under eachother */
     grid-template-areas:
       "title"
       "workshop"
